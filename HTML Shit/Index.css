@@ -1,0 +1,153 @@
+.upperText{
+    height: auto;
+    width: auto;
+    border: 1px solid blueviolet;
+    padding: 0%;
+    margin: 0px;
+    text-shadow: 1px 1px yellow;
+    text-align: center;
+    line-height: 5px;
+    background-color: rgba(137, 43, 226, 0.616);
+}
+body{
+    background-image: url(Solyn/9l9fwm1k2iaf1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1980px;
+    max-height: 1250px;
+}
+.imageGallery{
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;           /* Remove fixed height */
+    min-height: 300px;      /* Optional: minimum height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Remove white-space: nowrap; */
+}
+.imageGallery img{
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    max-height: 400px;
+    max-width: 100%;        /* Make images scale to container */
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+.mENU{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid white;
+    margin: 1px;
+    color: white;
+    padding: 0.5px;
+}
+.galleryWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.galleryWrapper img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.videoWrapper {
+    width: 100%;
+    max-width: 1%   ; /* or your preferred max width */
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.galleryBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: rgba(255, 255, 255, 0.486);
+    border: none;
+    font-size: 2vw;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    user-select: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.galleryBtn.left {
+    left: 5px;
+}
+
+.galleryBtn.right {
+    right: 5px;
+}
+
+.galleryWrapper:hover .galleryBtn {
+    opacity: 1;
+    pointer-events: auto;
+}
+.redirectorP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.redirector1 {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background-image: url(Solyn/Futuristic_Treatise_Code_\(Wrath_of_the_Gods\).png);
+}
+
+/* Responsive text */
+.upperText h1, .upperText h4 {
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .imageGallery {
+        max-width: 100%;
+        padding: 5px;
+        min-height: 150px;  /* Smaller min-height for mobile */
+    }
+    .imageGallery img {
+        max-height: 200px;  /* Smaller images for mobile */
+    }
+    .galleryBtn {
+        font-size: 5vw;
+        padding: 0.5em 0.8em;
+    }
+    .upperText h1, .upperText h4 {
+        font-size: 5vw;
+    }
+}

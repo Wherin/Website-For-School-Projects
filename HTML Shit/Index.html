@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WebDevBlog</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="icon" href="Solyn/Black_Hole_(Wrath_of_the_Gods).png">
+</head>
+<body>
+    <div class="mENU">
+        <h4 style="text-align: left; margin: 5px;">Menu</h4>
+        <div class="videoWrapper">
+            <video
+                muted
+                loop
+                autoplay
+                preload="auto"
+                playsinline
+                src="Main/Clover Dancin.mp4">
+            </video>
+        </div>
+    </div>
+    <div class="upperText">
+        <h1>My Solyn Artwork Collection</h1>
+        <h4>I stole all of these from Reddit</h4>
+    </div>
+    <div class="imageGallery">
+        <div class="galleryWrapper">
+            <button class="galleryBtn left" onclick="prevImage()">&lt;</button>
+            <img id="galleryImage" src="Solyn/0z0sc5l2c7me1.png" alt="Gallery Image">
+            <button class="galleryBtn right" onclick="nextImage()">&gt;</button>
+        </div>
+    </div>
+    <script>
+        const images = [
+            "Solyn/0z0sc5l2c7me1.png",
+            "Solyn/562d4r15mlve1.jpeg",
+            "Solyn/5j9ok1k7m8df1.jpeg",
+            "Solyn/9l9fwm1k2iaf1.jpeg",
+            "Solyn/solyn-art-by-me-wotg-spoiler-v0-mzsp4bxueile1.webp"
+        ];
+        let current = 0;
+        function showImage(index) {
+            document.getElementById('galleryImage').src = images[index];
+        }
+        function prevImage() {
+            current = (current - 1 + images.length) % images.length;
+            showImage(current);
+        }
+        function nextImage() {
+            current = (current + 1) % images.length;
+            showImage(current);
+        }
+    </script>
+    <div class="redirectorP">
+        <a href="Calc.html" class="redirector1">Calculator Page</a>
+    </div>
+    <div class="footer">
+        <p>© 2023 My WebDevBlog. All rights reserved.</p>
+    </div>
+</body>
+</html>
